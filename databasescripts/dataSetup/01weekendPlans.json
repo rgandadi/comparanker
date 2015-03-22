@@ -1,0 +1,48 @@
+db.getCollection('testData').remove(
+	{"type":"players", "tournamentId":"weekendPlans"}
+)
+
+db.testData.insert(
+[
+  {
+    "type":"players",
+    "tournamentId":"weekendPlans",
+    "playerId":NumberInt(1),
+    "name":"Hackathon",
+    "description":"Come to office for a hackathon",
+    "imageUrl":"http://www.manipalworldnews.com/wp-content/uploads/2014/11/info.jpg"
+   },
+  {
+    "type":"players",
+    "tournamentId":"weekendPlans",
+    "playerId":NumberInt(2),
+    "name":"Getaway",
+    "description":"Go to a weekend Destination",
+    "imageUrl":"http://www.groovetravelers.com/images/stories/asia-weekend-getaways.jpg"
+  },
+  {
+    "type":"players",
+    "tournamentId":"weekendPlans",
+    "playerId":NumberInt(3),
+    "name":"Nice Restaurant",
+    "description":"Nice Restaurant",
+    "imageUrl":"http://www.torrecatalunya.com/en/img/Visual-Eje-__H8.jpg"
+  },
+  {
+    "type":"players",
+    "tournamentId":"weekendPlans",
+    "playerId":NumberInt(4),
+    "name":"Family time",
+    "description":"Spend time with Family",
+    "imageUrl":"http://www.strongerfamilies.org/wp-content/uploads/2012/03/blog-Couple-with-children-on-their-shoulders.jpg"
+  },
+  {
+    "type":"players",
+    "tournamentId":"weekendPlans",
+    "playerId":NumberInt(5),
+    "name":"Sleep",
+    "description":"Sleep In and Relax",
+    "imageUrl":"https://nyoobserver.files.wordpress.com/2012/02/sleeping1.jpg"
+  }  
+]
+)

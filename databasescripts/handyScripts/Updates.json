@@ -1,0 +1,200 @@
+
+var players =  db.getCollection('testData').find(
+  {
+  	$query:{ "type":"players",
+    "tournamentId":"movies",
+    },
+    $orderby: { noOfGames : 1 } 
+  }
+ );
+  
+var numberOfPlayers = players.size; 
+  
+ var loadFactor = .8 
+ var p1 = 0;
+ var p2 =  Math.floor(Math.random() * numberOfPlayers * loadFactor) + 1;
+  
+	 var winner = p1;   
+     if(Math.random() > 0.3){
+        winner = p2;
+     }
+  
+  print("Next Game " + p1 +" vs " +p2);      
+  db.testData.insert( { "type" : "games", "tournamentId":"movies","player1":NumberInt(p1),"player2":NumberInt(p2),"result":NumberInt(winner),userId:"anonymous"} )
+ 
+
+
+//
+
+var players =  db.getCollection('testData').find(
+  {
+  	$query:{ "type":"players",
+    "tournamentId":"movies",
+    },
+    $orderby: { score : 1 } 
+  }
+ );
+ 
+ for(var i =1; i<= players.length, i++){
+ db.getCollection('testData').update(
+    { 
+        players[i];
+    },
+    {
+     $set:{
+     "currentRank":i,
+      }
+    },
+    { upsert: false }
+)
+
+}
+
+
+
+
+// Refine Ranking
+
+
+ var games =  db.getCollection('testData').find(
+  {
+  	$query:{ "type":"games",
+    "tournamentId":"movies",
+    }
+  }
+ );
+ 
+ var players =  db.getCollection('testData').find(
+  {
+  	$query:{ "type":"players",
+    "tournamentId":"movies",
+    }
+  }
+  
+  
+   for(var i =1; i<= games.length(); i++){
+     
+    games[i].player1 
+     
+   }
+
+
+-------
+
+
+db.getCollection('testData').distinct("tournamentId").forEach( function(myDoc) {
+var tournamentId = myDoc;
+db.getCollection('testData').find(
+  {
+  	$query:{ 
+  		"type":"players",
+	    "tournamentId":myDoc,
+    	},
+        $orderby: { rank : 1 } 
+  });
+});  
+
+
+
+for(var i = 1; i<=10; i++){
+var games = 
+db.getCollection('testData').find({
+	$or : [
+		    {player1:i},
+		    {player2:i}
+		    ]
+});
+
+var noOfWins = 
+db.getCollection('testData').count({result:i});
+
+print( "Player " + i + "  Games " + noOfGames + "  Wins " + noOfWins );
+
+ db.getCollection('testData').update(
+    { 
+        "type":"players",
+        "tournamentId":"movies",
+        "playerId":i
+    },
+    {
+     $set:{
+      "noOfGames": NumberInt(noOfGames),
+      "noOfWins": NumberInt(noOfWins),
+      "score" : NumberInt(noOfWins*100000/noOfGames),
+      }
+    },
+    { upsert: false }
+)
+
+}
+
+db.getCollection('testData').find({
+	$or : [
+		    {player1:1},
+		    {player2:1}
+		    ],
+        "result" : 1
+});
+
+
+
+
+
+
+
+var players1Data = db.getCollection('testData').findAndModify('testData').find(
+	{
+		query: 	{
+		playerId:1,
+		type:"players"
+		},
+		update: { $inc: { noOfGames: 1 }
+	}
+	);
+	
+var noOfGames = players1Data.noOfGames;
+if(winner == p1)
+var noOfWins = players1Data.noOfWins;
+	
+db.getCollection('testData').update(
+    { 
+        "type":"players",
+        "playerId":p1
+    },
+    {
+     $set:{
+      "noOfGames": NumberInt(noOfGames+1),
+      "noOfWins": NumberInt(noOfWins+1),
+      "score" : NumberInt(noOfWins*100000/noOfGames),
+      }
+    },
+    { upsert: false }
+)
+ 
+}
+
+
+
+
+var numberOfPlayers = 5;
+for (var i = 1; i <= 30; i++) {
+	 var p1 = Math.floor(Math.random() * numberOfPlayers) + 1;
+	 var p2 =  Math.floor(Math.random() * numberOfPlayers) + 1;
+	  while(p1 == p2)
+	    p2 =  Math.floor(Math.random() * numberOfPlayers) + 1;
+	    
+	 var winner = p1;   
+     if(Math.random() > 0.3){
+        winner = p2;
+     }
+
+	 db.testData.insert( { "type" : "games", "tournamentId":"beverages","player1":NumberInt(p1),"player2":NumberInt(p2),"result":NumberInt(winner),userId:"anonymous"} )
+      
+}
+
+
+
+
+
+
+

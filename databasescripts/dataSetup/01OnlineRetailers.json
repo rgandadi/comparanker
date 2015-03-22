@@ -1,0 +1,48 @@
+db.getCollection('testData').remove(
+	{"type":"players", "tournamentId":"onlineRetailers"}
+)
+
+db.testData.insert(
+[
+  {
+    "type":"players",
+    "tournamentId":"onlineRetailers",
+    "playerId":NumberInt(1),
+    "name":"Amazon",
+    "description":"From A to Z ",
+    "imageUrl":"http://www.turnerduckworth.com/media/filer_public/b4/ac/b4ac5dfe-b335-403c-83b2-ec69e01f94e6/td-amazon-hero.svg"
+   },
+  {
+    "type":"players",
+    "tournamentId":"onlineRetailers",
+    "playerId":NumberInt(2),
+    "name":"Flipkart",
+    "description":"The Online Megastore",
+    "imageUrl":"http://www.consumercomplaints.in/thumb.php?src=flipkart.jpg&wmax=900&hmax=900&quality=90&nocrop=1&bname=100087"
+  },
+  {
+    "type":"players",
+    "tournamentId":"onlineRetailers",
+    "playerId":NumberInt(3),
+    "name":"Snapdeal",
+    "description":"Snap Deal",
+    "imageUrl":"http://i1.sdlcdn.com/img/snapdeal/sprite/snapdeal_logo.png?v=8"
+  },
+  {
+    "type":"players",
+    "tournamentId":"onlineRetailers",
+    "playerId":NumberInt(4),
+    "name":"eBay",
+    "description":"E Bay",
+    "imageUrl":"http://upload.wikimedia.org/wikipedia/commons/thumb/1/11/EBay_former_logo.svg/2000px-EBay_former_logo.svg.png"
+  },
+  {
+    "type":"players",
+    "tournamentId":"onlineRetailers",
+    "playerId":NumberInt(5),
+    "name":"Alibaba",
+    "description":"Without his Chalees Chor",
+    "imageUrl":"http://moneymorning.com/files/2014/08/alibaba-logo.png"
+  }  
+]
+)

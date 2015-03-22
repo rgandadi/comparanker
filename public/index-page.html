@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Calendar</title>
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script type="text/javascript" src="lib/jquery/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="lib/can/can.jquery.js"></script>
+    </head>
+    <body>
+        <div class="container page">
+        </div>
+
+        <script type="text/javascript" src="lib/can/can.map.backup.js"></script>
+        <script type="text/javascript" src="lib/can/can.fixture.js"></script>
+        <script type="text/javascript" src="lib/date-formatter/date-formatter.js"></script>
+        <script type="text/javascript" src="js/model/calendar.js"></script>
+        <script type="text/javascript" src="js/controls/event-picker.js"></script>
+        <script type="text/javascript" src="js/components/days-list.js"></script>
+        <script type="text/javascript" src="js/components/date-picker.js"></script>
+        <script type="text/javascript" src="js/components/calendar.js"></script>
+
+        <script type="text/javascript">
+            $(function() {
+                var template = can.view('js/views/calendar-app.mustache');
+                $('.container').append(template);
+            });
+        </script>
+    </body>
+</html>

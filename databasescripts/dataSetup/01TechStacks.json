@@ -1,0 +1,56 @@
+db.getCollection('testData').remove(
+	{"type":"players", "tournamentId":"techStacks"}
+)
+
+db.testData.insert(
+[
+  {
+    "type":"players",
+    "tournamentId":"techStacks",
+    "playerId":NumberInt(1),
+    "name":"Spring",
+    "description":"Java, J2EE, Spring Framework",
+    "imageUrl":"https://yt3.ggpht.com/-zF4TRgEyKkg/AAAAAAAAAAI/AAAAAAAAAAA/IBt_QgQUASE/s100-c-k-no/photo.jpg"
+   },
+  {
+    "type":"players",
+    "tournamentId":"techStacks",
+    "playerId":NumberInt(2),
+    "name":".Net",
+    "description":"ASP, .NET, Microsoft Technologies",
+    "imageUrl":"http://img.clubic.com/05403751-photo-net-framework.jpg"
+  },
+  {
+    "type":"players",
+    "tournamentId":"techStacks",
+    "playerId":NumberInt(3),
+    "name":"Node js",
+    "description":"Javascript, Node JS, mongodb",
+    "imageUrl":"http://calebmadrigal.com/images/nodejs-logo.png"
+  },
+  {
+    "type":"players",
+    "tournamentId":"techStacks",
+    "playerId":NumberInt(4),
+    "name":"Python Based",
+    "description":"Django, ",
+    "imageUrl":"http://www.gaggl.com/wp-content/uploads/2013/11/python-django.png"
+  },
+  {
+    "type":"players",
+    "tournamentId":"techStacks",
+    "playerId":NumberInt(5),
+    "name":"Ruby",
+    "description":"Ruby, Ruby On Rails",
+    "imageUrl":"http://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Ruby_on_Rails.svg/593px-Ruby_on_Rails.svg.png"
+  },
+  {
+    "type":"players",
+    "tournamentId":"techStacks",
+    "playerId":NumberInt(6),
+    "name":"php",
+    "description":"php, MySQL",
+    "imageUrl":"https://uwudamith.files.wordpress.com/2011/08/php_mysql_logo.png"
+  }
+]
+)

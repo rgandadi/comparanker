@@ -1,0 +1,62 @@
+
+
+
+
+
+for(var i = 1; i<=10; i++){
+
+var noOfGames = 
+db.getCollection('testData').count({
+	$or : [
+		    {player1:i},
+		    {player2:i}
+		    ]
+});
+
+var noOfWins = 
+db.getCollection('testData').count({result:i});
+
+print( "Player " + i + "  Games " + noOfGames + "  Wins " + noOfWins );
+
+}
+
+
+
+ db.getCollection('testData').update(
+   { 
+   	"type":"players",
+    "tournamentId":"movies",
+    "playerId":1 
+    },
+    {
+    $set:{
+      noOfGames: "10"
+    }
+    },
+    { upsert: false }
+)
+
+
+
+ db.getCollection('testData').find(
+  {
+  	$query:{ "type":"players",
+    "tournamentId":"movies",
+    },
+    $orderby: { noOfGames : -1 } 
+  }
+ )
+ 
+ 
+  db.getCollection('testData').find(
+  {
+  	$query:{ "type":"players",
+    "tournamentId":"movies",
+    },
+    $orderby: { score : -1 } 
+  }
+ )
+
+
+
+

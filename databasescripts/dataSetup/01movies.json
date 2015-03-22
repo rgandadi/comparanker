@@ -1,0 +1,89 @@
+db.getCollection('testData').remove(
+	{"type":"players", "tournamentId":"movies"}
+)
+
+
+db.testData.insert(
+[
+  {
+    "type":"players",
+    "tournamentId":"movies",
+    "playerId":NumberInt(1),
+    "name":"Pulp Fiction",
+    "description":"The lives of two mob hit men, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption",
+    "imageUrl":"http://ia.media-imdb.com/images/M/MV5BMjE0ODk2NjczOV5BMl5BanBnXkFtZTYwNDQ0NDg4._V1_SY317_CR4,0,214,317_AL_.jpg"
+   },
+  {
+    "type":"players",
+    "tournamentId":"movies",
+    "playerId":NumberInt(2),
+    "name":"12 Angry Men",
+    "description":"A dissenting juror in a murder trial slowly manages to convince the others that the case is not as obviously clear as it seemed in court.",
+    "imageUrl":"http://ia.media-imdb.com/images/M/MV5BODQwOTc5MDM2N15BMl5BanBnXkFtZTcwODQxNTEzNA@@._V1_SX214_AL_.jpg"
+  },
+  {
+    "type":"players",
+    "tournamentId":"movies",
+    "playerId":NumberInt(3),
+    "name":"The Godfather II",
+    "description":"The early life and career of Vito Corleone in 1920s New York is portrayed while his son, Michael, expands and tightens his grip on his crime syndicate stretching from Lake Tahoe, Nevada to pre-revolution 1958 Cuba.",
+    "imageUrl":"http://ia.media-imdb.com/images/M/MV5BNDc2NTM3MzU1Nl5BMl5BanBnXkFtZTcwMTA5Mzg3OA@@._V1_SX214_AL_.jpg"
+  },
+  {
+    "type":"players",
+    "tournamentId":"movies",
+    "playerId":NumberInt(4),
+    "name":"The Godfather",
+    "description":"The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+    "imageUrl":"http://ia.media-imdb.com/images/M/MV5BMjEyMjcyNDI4MF5BMl5BanBnXkFtZTcwMDA5Mzg3OA@@._V1_SX214_AL_.jpg"
+  },
+  {
+    "type":"players",
+    "tournamentId":"movies",
+    "playerId":NumberInt(5),
+    "name":"The Good, the Bad and the Ugly",
+    "description":"A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.",
+    "imageUrl":"http://ia.media-imdb.com/images/M/MV5BOTQ5NDI3MTI4MF5BMl5BanBnXkFtZTgwNDQ4ODE5MDE@._V1_SX214_AL_.jpg"
+  },
+  {
+    "type":"players",
+    "tournamentId":"movies",
+    "playerId":NumberInt(6),
+    "name":"The Lord of the Rings: The Return of the King",
+    "description":"Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+    "imageUrl":"http://ia.media-imdb.com/images/M/MV5BMjE4MjA1NTAyMV5BMl5BanBnXkFtZTcwNzM1NDQyMQ@@._V1_SX214_AL_.jpg"
+  },
+  {
+    "type":"players",
+    "tournamentId":"movies",
+    "playerId":NumberInt(7),
+    "name":"Fight Club",
+    "description":"An insomniac office worker looking for a way to change his life crosses paths with a devil-may-care soap maker and they form an underground fight club that evolves into something much, much more...",
+    "imageUrl":"http://ia.media-imdb.com/images/M/MV5BMjIwNTYzMzE1M15BMl5BanBnXkFtZTcwOTE5Mzg3OA@@._V1_SX214_AL_.jpg"
+  },
+  {
+    "type":"players",
+    "tournamentId":"movies",
+    "playerId":NumberInt(8),
+    "name":"Shawshank Redemption",
+    "description":"Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "imageUrl":"http://ia.media-imdb.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX214_AL_.jpg"
+  },
+  {
+    "type":"players",
+    "tournamentId":"movies",
+    "playerId":NumberInt(9),
+    "name":"Schindler's List",
+    "description":"In Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+    "imageUrl":"http://ia.media-imdb.com/images/M/MV5BMzMwMTM4MDU2N15BMl5BanBnXkFtZTgwMzQ0MjMxMDE@._V1_SX214_AL_.jpg"
+  },
+   {
+    "type":"players",
+    "tournamentId":"movies",
+    "playerId":NumberInt(10),
+    "name":"The Dark Knight",
+    "description":"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
+    "imageUrl":"http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SY317_CR0,0,214,317_AL_.jpg"
+  }
+]
+)

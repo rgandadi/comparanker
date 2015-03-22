@@ -1,0 +1,73 @@
+db.getCollection('testData').remove(
+	{"type":"players", "tournamentId":"cricketPlayers"}
+)
+
+db.testData.insert(
+[
+  {
+    "type":"players",
+    "tournamentId":"cricketPlayers",
+    "playerId":NumberInt(1),
+    "name":"M S Dhoni",
+    "description":"The Captain Cool",
+    "imageUrl":"http://www.chitramala.in/wp-content/uploads/2015/01/Mahendra-Singh-Dhoni-Biopic.jpg"
+   },
+  {
+    "type":"players",
+    "tournamentId":"cricketPlayers",
+    "playerId":NumberInt(2),
+    "name":"Virat Kohli",
+    "description":"The Consistant",
+    "imageUrl":"http://st3.cricketcountry.com/wp-content/uploads/cricket/20140521023436.jpeg"
+  },
+  {
+    "type":"players",
+    "tournamentId":"cricketPlayers",
+    "playerId":NumberInt(3),
+    "name":"Suresh Raina",
+    "description":"The Reliable",
+    "imageUrl":"http://st3.cricketcountry.com/wp-content/uploads/cricket/20140802053453.jpeg"
+  },
+  {
+    "type":"players",
+    "tournamentId":"cricketPlayers",
+    "playerId":NumberInt(4),
+    "name":"R Ashwin",
+    "description":"The Cool Spinner",
+    "imageUrl":"http://static.dnaindia.com/sites/default/files/2014/04/25/230664-ashwin1.jpg"
+  },
+  {
+    "type":"players",
+    "tournamentId":"cricketPlayers",
+    "playerId":NumberInt(5),
+    "name":"Ravindra Jadeja",
+    "description":"The unpredictable Sirjee",
+    "imageUrl":"http://st3.cricketcountry.com/wp-content/uploads/cricket/20140521024112.jpeg"
+  },
+    {
+    "type":"players",
+    "tournamentId":"cricketPlayers",
+    "playerId":NumberInt(6),
+    "name":"A B deVilliars",
+    "description":"The Improv Artist",
+    "imageUrl":"http://sportspapa.com/wp-content/uploads/2014/05/AB-de-Villiers2.jpg"
+  },
+  {
+    "type":"players",
+    "tournamentId":"cricketPlayers",
+    "playerId":NumberInt(7),
+    "name":"Glenn Maxwell",
+    "description":"The Max King",
+    "imageUrl":"http://www.cricket.com.au/~/media/Players/Men/International/Australia/glenn-maxwell-odi.ashx"
+  } ,
+    {
+    "type":"players",
+    "tournamentId":"cricketPlayers",
+    "playerId":NumberInt(8),
+    "name":"George Bailey",
+    "description":"The Captain",
+    "imageUrl":"http://www3.pictures.zimbio.com/gi/George+Bailey+2012+13+Australian+Cricket+Headshots+msOlW62cXKql.jpg"
+  } 
+  
+]
+)

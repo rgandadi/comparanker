@@ -1,0 +1,22 @@
+doctype 5
+html(lang="en")
+    head
+        title= 'Ranker'
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+        meta(name="description", content="")
+        meta(name="author", content="")
+        meta(name="viewport", content="width=device-width,initial-scale=1")
+
+        link(rel='stylesheet', href="http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic")
+        link(rel='stylesheet', href='lib/bootstrap/css/bootstrap.min.css')  
+        link(rel='stylesheet', href='css/styles.css')  
+
+        script(type='text/javascript', src='lib/jquery/jquery-1.9.1.js')
+        script(type='text/javascript', src='js/game.js')
+        script(type='text/javascript', src='lib/highcharts-custom.js')
+    body
+        .navbar-wrapper
+            .container
+                h1 Comparison Based Ranking Framework
+        block content

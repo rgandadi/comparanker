@@ -1,0 +1,40 @@
+db.getCollection('testData').remove(
+	{"type":"players", "tournamentId":"policies"}
+)
+
+db.testData.insert(
+[
+  {
+    "type":"players",
+    "tournamentId":"policies",
+    "playerId":NumberInt(1),
+    "name":"Flyover",
+    "description":"Build lots of flyovers",
+    "imageUrl":"http://upload.wikimedia.org/wikipedia/commons/3/36/Airport_Flyover,_Brisbane.JPG"
+   },
+  {
+    "type":"players",
+    "tournamentId":"policies",
+    "playerId":NumberInt(2),
+    "name":"Metro",
+    "description":"Invest in metro train",
+    "imageUrl":"http://www.thehindu.com/multimedia/dynamic/01126/27BGPAGE4-2_1126245f.jpg"
+  },
+  {
+    "type":"players",
+    "tournamentId":"policies",
+    "playerId":NumberInt(3),
+    "name":"Bicycle Lanes",
+    "description":"Encourage Bicycle Lane",
+    "imageUrl":"http://1.imimg.com/data1/P/K/MY-78172/complete-bicycle-pl-rl-type.gif"
+  },
+  {
+    "type":"players",
+    "tournamentId":"policies",
+    "playerId":NumberInt(4),
+    "name":"Petrol Price",
+    "description":"Remove subsidy and hike petrol price",
+    "imageUrl":"http://theindianeconomist.com/wp-content/uploads/2013/08/Petrol-drips-from-a-gasoline-pump-at-a-petrol-station-in-London-904585.jpg"
+  }
+]
+)

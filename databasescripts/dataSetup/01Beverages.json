@@ -1,0 +1,48 @@
+db.getCollection('testData').remove(
+	{"type":"players", "tournamentId":"beverages"}
+)
+
+db.testData.insert(
+[
+  {
+    "type":"players",
+    "tournamentId":"beverages",
+    "playerId":NumberInt(1),
+    "name":"Coke",
+    "description":"Coke in a Bottle",
+    "imageUrl":"http://cdn.shopify.com/s/files/1/0208/8114/products/coke-1-5_2_1024x1024.png?v=1366179152"
+   },
+  {
+    "type":"players",
+    "tournamentId":"beverages",
+    "playerId":NumberInt(2),
+    "name":"Diet Coke!",
+    "description":"Stay Slim and Trim.. Yeah Right",
+    "imageUrl":"http://www.thedrum.com/uploads/news/179517/diet-coke.jpg"
+  },
+  {
+    "type":"players",
+    "tournamentId":"beverages",
+    "playerId":NumberInt(3),
+    "name":"Coke in a Can",
+    "description":"Coke in a Can",
+    "imageUrl":"http://www.smokersheavenshop.co.uk/images/P/coke-stash-can.jpg"
+  },
+  {
+    "type":"players",
+    "tournamentId":"beverages",
+    "playerId":NumberInt(4),
+    "name":"In a glass",
+    "description":"In a nice looking glass",
+    "imageUrl":"http://www.dairyqueen.com/Global/SoftDrinks_Glass/Coke.png?width=&height=810"
+  },
+  {
+    "type":"players",
+    "tournamentId":"beverages",
+    "playerId":NumberInt(5),
+    "name":"Classic",
+    "description":"In a traditional bottle",
+    "imageUrl":"http://images.clipartpanda.com/coke-clipart-Coca-Cola-Art_Coke_Bottle4.jpg"
+  }  
+]
+)

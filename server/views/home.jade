@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    .container
+        .row
+            form("method='GET', action='/update'")
+                input(type="hidden", name="result", value="")
+                input(type="hidden", name="tournamentId", value="#{tournamentId}")
+                ul.thumbnails
+                    li.player.player1
+                        .checkmark 
+                        .thumbnail 
+                            h4 #{player1.name}
+                            img(src="#{player1.imageUrl}")
+                            p #{player1.description}
+                            input(type="hidden", name="player1", value="#{player1.playerId}")
+                    li.player.player2
+                        .checkmark 
+                        .thumbnail 
+                            h4 #{player2.name}
+                            img(src="#{player2.imageUrl}")
+                            p #{player2.description}
+                            input(type="hidden", name="player2", value="#{player2.playerId}")
+            .tag 
+                - each tName in tournamentIds
+                    a(href='/?tournamentId=#{tName}') ##{tName}
+                .result
+                    a(href='/result?tournamentId=#{tournamentId}') Results
+                input(type="hidden", value="#{tournamentId}")
+    footer.bs-docs-footer Built using Twitter Bootstrap, Node.js, Express, and MongoDB.

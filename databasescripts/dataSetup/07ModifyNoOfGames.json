@@ -1,0 +1,11 @@
+
+db.getCollection('testData').findAndModify(
+	{
+		$query:{ "type":"players",
+                "tournamentId":"beverages",
+        },
+		update: { $inc: { noOfGames: NumberInt(1) }
+	}
+    }
+	);
+ 

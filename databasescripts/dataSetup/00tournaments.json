@@ -1,0 +1,35 @@
+db.getCollection('testData').remove(
+	{"type":"tournaments"}
+)
+
+db.testData.insert(
+[
+  {
+    "type":"tournaments",
+    "tournamentId":"movies",
+    "description":"Which movie do you like better?",
+   },
+  {
+    "type":"tournaments",
+    "tournamentId":"beverages",
+    "description":"What do you prefer?",
+  },
+  {
+    "type":"tournaments",
+    "tournamentId":"weekendPlans",
+    "description":"How do you prefer to spend your weekend?",
+  },
+  {
+    "type":"tournaments",
+    "tournamentId":"onlineRetailers",
+    "description":"Which online retailer is better?",
+  },
+  {
+    "type":"tournaments",
+    "tournamentId":"techStacks",
+    "description":"Which is a better technology stack?"
+  }  
+]
+)
+
+

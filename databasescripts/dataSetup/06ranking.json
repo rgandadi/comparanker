@@ -1,0 +1,14 @@
+db.getCollection('testData').distinct("tournamentId").forEach( function(myDoc) {
+var tournamentId = myDoc;
+
+db.getCollection('testData').find(
+  {
+  	$query:{ 
+            "type":"players",
+	    "tournamentId":myDoc,
+    	},
+        $orderby: { rank : 1 } 
+  });
+});
+
+

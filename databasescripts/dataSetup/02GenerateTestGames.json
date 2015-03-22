@@ -1,0 +1,34 @@
+db.testData.remove({"type" : "games"});
+
+db.testData.distinct("tournamentId").forEach( function(myDoc) {
+
+var tournamentId = myDoc;
+var numberOfPlayers =  db.getCollection('testData').count({"type":"players", "tournamentId":tournamentId});
+
+for (var i = 1; i <= numberOfPlayers * 10; i++) {
+	 var p1 = Math.floor(Math.random() * numberOfPlayers) + 1;
+	 var p2 =  Math.floor(Math.random() * numberOfPlayers) + 1;
+	  while(p1 == p2)
+	    p2 =  Math.floor(Math.random() * numberOfPlayers) + 1;
+	    
+	 var winner = p1;   
+     if(Math.random() > 0.3){
+        winner = p2;
+     }
+
+	 db.testData.insert( 
+	 	{ 
+	 		"type" : "games", 
+	 		"tournamentId":tournamentId,
+	 		"player1":NumberInt(p1),
+	 		"player2":NumberInt(p2),
+	 		"result":NumberInt(winner),
+	 		 userId:"anonymous"
+	 	} )
+ 
+}
+
+} );
+
+
+//db.testData.find();

@@ -1,0 +1,43 @@
+  // Assign Ranking
+
+  db.getCollection('testData').distinct("tournamentId").forEach( function(myDoc) {
+  
+  var tournamentId = myDoc;
+  
+  var players =  db.getCollection('testData').find(
+  {
+  	$query:{ 
+  		"type":"players",
+    	"tournamentId":tournamentId,
+    	},
+    $orderby: { score : -1 } 
+  }
+  );
+ 
+ 
+  for(var i =0; i< players.length(); i++){
+	   db.getCollection('testData').update(
+    	{ 	
+			playerId : players[i].playerId,
+			"tournamentId":tournamentId
+    	},
+    	{
+    		$set:{
+      			rank: NumberInt(i+1)
+    		}
+    	},
+    	{ 	
+    		upsert: false 
+    	}
+	)
+  }
+  
+});
+  
+  
+  
+ 
+ 
+
+
+

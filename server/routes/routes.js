@@ -4,13 +4,32 @@ var Server = mongo.Server,
     Db = mongo.Db,
     BSON = mongo.BSONPure;
 
-var server = new Server('10.67.207.166', 27017, {auto_reconnect: true});
-db = new Db('Hackit', server, {safe: true});
+//var server = new Server('localhost', 27017, {auto_reconnect: true});
+//db = new Db('Hackit', server, {safe: true});
+
+   
+var server = new Server('ds031628.mongolab.com', 31628, {auto_reconnect: true});
+db = new Db('heroku_app35120998', server, {safe: true});
 
 
+   
 db.open(function(err, db) {
+
+    // Add a user to the database
+    db.addUser('heroku_app35120998', 'u1ogb6ojpiri1fin8ijdp3e213', function(err, result) {
+
+      // Authenticate
+      db.authenticate('heroku_app35120998', 'u1ogb6ojpiri1fin8ijdp3e213', function(err, result) {
+
+        console.log("authenticated to 'heroku_app35120998' database");
+
+        db.close();
+      });
+    });
+    
     if(!err) {
-        console.log("Connected to 'Hackit' database");
+    
+        console.log("Connected to 'heroku_app35120998' database");
         db.collection('testData', {safe:true}, function(err, collection) {
             if (err) {
                 console.log("The 'testData' collection doesn't exist. Creating it with sample data...");
